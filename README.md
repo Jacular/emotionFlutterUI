@@ -1,5 +1,3 @@
-# amotionflutterui
-
 # 一套情感设计flutter应用ui 组件，内容分两大主要模块：
 
 1. ## 场景组件
