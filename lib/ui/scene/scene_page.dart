@@ -61,6 +61,13 @@ class _ScenePageState extends State<ScenePage>
     MenuList menuCarList=new MenuList("汽车类效果集合", carChildList);
     _menuList.add(menuCarList);
 
+    List<Menu> copyChildList=new List<Menu>();
+    copyChildList.add(Menu("copy_tx_series","腾讯系列","images/ic_product_classify.png"));
+    copyChildList.add(Menu("copy_ali_series","阿里系列","images/ic_product_classify.png"));
+    copyChildList.add(Menu("copy_bd_series","百度系列","images/ic_product_classify.png"));
+    copyChildList.add(Menu("copy_tmd_series","TMD系列","images/ic_product_classify.png"));
+    MenuList menCopyList=new MenuList("模仿大厂效果集合", copyChildList);
+    _menuList.add(menCopyList);
   }
 
   @override

@@ -20,19 +20,19 @@ class HomeBottomBar extends StatelessWidget {
         onTap: (index) => onTabChanged(index),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset("images/ic_home_scene.svg"),
-            icon: SvgPicture.asset("images/ic_home_scene.svg"),
+            activeIcon: Image.asset("images/ic_home_scene.png"),
+            icon: Image.asset("images/ic_home_scene.png"),
             label: "场景组件",
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset("images/ic_home_common.svg"),
-            icon: SvgPicture.asset("images/ic_home_common.svg"),
+            activeIcon: Image.asset("images/ic_home_common.png"),
+            icon: Image.asset("images/ic_home_common.png"),
             label: "通用组件",
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset("images/ic_home_about.svg"),
-            icon: SvgPicture.asset("images/ic_home_about.svg"),
-            label: "关于我们",
+            activeIcon: Image.asset("images/ic_home_about.png"),
+            icon: Image.asset("images/ic_home_about.png"),
+            label: "我们团队",
           ),
         ],
       ),

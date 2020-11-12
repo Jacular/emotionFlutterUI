@@ -26,7 +26,7 @@
    广告类
 
 整体结构图
-![image-20201112104103293](https://github.com/Jacular/emotionFlutterUI/blob/master/typora-user-images/image-20201112104103293.png)
+![image-20201112104103293](https://github.com/Jacular/emotionFlutterUI/blob/master/images/Emotion_Flutter_UI开源项目结构.png)
 
 
 
