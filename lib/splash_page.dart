@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:amotionflutterui/home_page.dart';
 import 'package:amotionflutterui/utils/adapt.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_component/flutter_component.dart';
+
+import 'color/color.dart';
 
 class SplashPage extends StatefulWidget {
   @override

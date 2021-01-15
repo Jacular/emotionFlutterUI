@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:amotionflutterui/entity/menu_entity.dart';
+import 'package:amotionflutterui/ui/pages/dialog/dialog_page.dart';
 import 'file:///F:/flutterProduct/emotionFlutterUI/lib/widget/menu.dart';
 import 'package:amotionflutterui/utils/adapt.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,7 @@ class _CommonPageState extends State<CommonPage>
     _menuList.add(menuCourseList);
 
     List<Menu> bankChildList=new List<Menu>();
-    bankChildList.add(Menu("account_list","dialog","images/ic_product_classify.png"));
+    bankChildList.add(Menu("dialog_list","dialog","images/ic_product_classify.png"));
     bankChildList.add(Menu("account_qr","Popup","images/ic_product_classify.png"));
     MenuList menuBankList=new MenuList("弹框", bankChildList);
     _menuList.add(menuBankList);
@@ -129,7 +130,7 @@ class _CommonPageState extends State<CommonPage>
 
   void menuRouter(String menu) {
     final Map<String, Widget> menuWidgets = {
-      // "shopping_classify": PractitionerListPage(),
+       "dialog_list": DialogPage(),
       // "shopping_list": WebViewH5Page(url: H5_URL_THIRD, title: "emotion"),
       // "shopping_detail": TicketPage()
     };
