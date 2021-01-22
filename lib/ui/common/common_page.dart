@@ -131,6 +131,7 @@ class _CommonPageState extends State<CommonPage>
   void menuRouter(String menu) {
     final Map<String, Widget> menuWidgets = {
        "dialog_list": DialogPage(),
+       "account_qr": DialogPage(),
       // "shopping_list": WebViewH5Page(url: H5_URL_THIRD, title: "emotion"),
       // "shopping_detail": TicketPage()
     };

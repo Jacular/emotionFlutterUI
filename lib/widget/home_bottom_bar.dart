@@ -1,6 +1,5 @@
 import 'package:amotionflutterui/color/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeBottomBar extends StatelessWidget {
   final int selectedTab;

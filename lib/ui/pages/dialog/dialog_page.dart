@@ -5,6 +5,7 @@ import 'package:amotionflutterui/widget/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+///弹框
 class DialogPage extends StatefulWidget {
   @override
   _DialogPageState createState() => _DialogPageState();
@@ -18,6 +19,7 @@ class _DialogPageState extends State<DialogPage> {
     List<Menu> otherChildList=new List<Menu>();
     otherChildList.add(Menu("001","普通弹框","images/ic_product_classify.png"));
     otherChildList.add(Menu("002","带输入框弹框","images/ic_product_classify.png"));
+    otherChildList.add(Menu("003","二维码","images/ic_product_classify.png"));
 
     MenuList menuOtherList=new MenuList("dialog", otherChildList);
     _menuList.add(menuOtherList);
