@@ -21,6 +21,13 @@ class _CommonPageState extends State<CommonPage>
   void initState() {
     super.initState();
     _menuList=List();
+
+    List<Menu> bankChildList=new List<Menu>();
+    bankChildList.add(Menu("dialog_list","dialog","images/ic_product_classify.png"));
+    bankChildList.add(Menu("account_qr","Popup","images/ic_product_classify.png"));
+    MenuList menuBankList=new MenuList("弹框", bankChildList);
+    _menuList.add(menuBankList);
+
     List<Menu> otherChildList=new List<Menu>();
     otherChildList.add(Menu("shopping_classify","启动样式","images/ic_product_classify.png"));
     otherChildList.add(Menu("shopping_list","登录注册","images/ic_product_classify.png"));
@@ -51,11 +58,6 @@ class _CommonPageState extends State<CommonPage>
     MenuList menuCourseList=new MenuList("行动类", courseChildList);
     _menuList.add(menuCourseList);
 
-    List<Menu> bankChildList=new List<Menu>();
-    bankChildList.add(Menu("dialog_list","dialog","images/ic_product_classify.png"));
-    bankChildList.add(Menu("account_qr","Popup","images/ic_product_classify.png"));
-    MenuList menuBankList=new MenuList("弹框", bankChildList);
-    _menuList.add(menuBankList);
 
     List<Menu> newsChildList=new List<Menu>();
     newsChildList.add(Menu("news_manage","车牌输入","images/ic_product_classify.png"));
