@@ -74,7 +74,7 @@ class _DialogPageState extends State<DialogPage> {
       editHintText: "请输入内容（可选）",
       onEditValue: (editString) {
         // 请求成功
-        Navigator.pop(context,true);
+        Navigator.pop(context);
         return true;
       },
     );
