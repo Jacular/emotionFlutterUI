@@ -34,8 +34,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 controller: _tabController,
                 physics: const NeverScrollableScrollPhysics(),
                 children: <Widget>[
-                  ScenePage(),
                   CommonPage(),
+                  ScenePage(),
                   WePage(),
                 ],
               ),

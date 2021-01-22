@@ -19,14 +19,14 @@ class HomeBottomBar extends StatelessWidget {
         onTap: (index) => onTabChanged(index),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            activeIcon: Image.asset("images/ic_home_scene.png"),
-            icon: Image.asset("images/ic_home_scene.png"),
-            label: "场景组件",
-          ),
-          BottomNavigationBarItem(
             activeIcon: Image.asset("images/ic_home_common.png"),
             icon: Image.asset("images/ic_home_common.png"),
             label: "通用组件",
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Image.asset("images/ic_home_scene.png"),
+            icon: Image.asset("images/ic_home_scene.png"),
+            label: "场景组件",
           ),
           BottomNavigationBarItem(
             activeIcon: Image.asset("images/ic_home_about.png"),

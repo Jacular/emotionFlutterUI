@@ -16,6 +16,7 @@ class _DialogPageState extends State<DialogPage> {
   @override
   void initState() {
     super.initState();
+    _menuList=List();
     List<Menu> otherChildList=new List<Menu>();
     otherChildList.add(Menu("001","普通弹框","images/ic_product_classify.png"));
     otherChildList.add(Menu("002","带输入框弹框","images/ic_product_classify.png"));
