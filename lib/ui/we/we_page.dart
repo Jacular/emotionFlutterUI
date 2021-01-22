@@ -3,12 +3,25 @@ import 'package:amotionflutterui/utils/adapt.dart';
 import 'package:amotionflutterui/widget/agreement/user_agreement_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_upgrade/flutter_app_upgrade.dart';
 
+class WePage extends StatefulWidget {
+  @override
+  _WePageState createState() => _WePageState();
+}
 
-class WePage extends StatelessWidget {
-  final String versionCode;
+class _WePageState extends State<WePage> {
+   String versionCode;
+  @override
+  void initState() {
+    super.initState();
 
-  const WePage({Key key, this.versionCode}) : super(key: key);
+    FlutterUpgrade.appInfo.then((value) {
+      versionCode = value.versionName;
+      print("versionCode" + versionCode);
+      setState(() {});
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +45,7 @@ class WePage extends StatelessWidget {
                     width: Adapt.px(70),
                     height: Adapt.px(70)),
                 SizedBox(height: Adapt.px(24)),
-                Text("当前版本: V$versionCode",
+                Text("当前版本: V$versionCode \n\n \n\n一起学习一起成长",
                     style: TextStyle(
                       color: color333333,
                       fontSize: Adapt.px(16),
@@ -62,3 +75,5 @@ class WePage extends StatelessWidget {
     );
   }
 }
+
+
