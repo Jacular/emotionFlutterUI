@@ -1,0 +1,52 @@
+import 'package:dio/dio.dart';
+
+/// 通用参数拦截器
+class ParamInterceptor extends InterceptorsWrapper {
+  static const String apiKey = 'xxxxxxxxxxxxxxxxxxxx';
+
+  ParamInterceptor();
+
+  @override
+  void onRequest(RequestOptions options,RequestInterceptorHandler handler) {
+    var method = options.method;
+    if (method == 'GET') {
+      options.queryParameters = _getAddParams(options);
+    } else {
+      options.data = _postAddParams(options);
+    }
+    return super.onRequest(options,handler);
+  }
+
+  Map<String, dynamic> _getAddParams(RequestOptions options) {
+    var params = options.queryParameters;
+    var commonParams = getCommonParams();
+    for (String key in params.keys) {
+      commonParams[key] = params[key];
+    }
+    return commonParams;
+  }
+
+  Map<String, dynamic> _postAddParams(RequestOptions options) {
+    var newData = new RequestOptions().data;
+    var data = options.data;
+    var commonParams = getCommonParams();
+
+    /// 添加通用元素
+    for (String key in commonParams.keys) {
+      newData[key] = commonParams[key];
+    }
+
+    /// 参数回填
+    for (String key in data.keys) {
+      newData[key] = data[key];
+    }
+    return newData;
+  }
+
+  /// 添加并获取通用参数 子类可以复写
+  Map<String, dynamic> getCommonParams() {
+    Map<String, dynamic> commonParams = new Map();
+    commonParams['apikey'] = apiKey;
+    return commonParams;
+  }
+}

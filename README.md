@@ -27,6 +27,9 @@
 ![image-20201112104103293](https://github.com/Jacular/emotionFlutterUI/blob/master/images/Emotion_Flutter_UI开源项目结构.png)
 
 
+View：Widget，用户交互
+ViewModel：负责业务处理，处理后拿到数据通知Widget刷新界面
+Model：通过Repository负责获取数据，存储在model上
 
 
 ## Getting Started
