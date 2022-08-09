@@ -3,7 +3,6 @@ import 'package:amotionflutterui/utils/adapt.dart';
 import 'package:amotionflutterui/widget/agreement/user_agreement_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_upgrade/flutter_app_upgrade.dart';
 
 class WePage extends StatefulWidget {
   @override
@@ -15,12 +14,12 @@ class _WePageState extends State<WePage> {
   @override
   void initState() {
     super.initState();
-
-    FlutterUpgrade.appInfo.then((value) {
-      versionCode = value.versionName;
-      print("versionCode" + versionCode);
-      setState(() {});
-    });
+    //
+    // FlutterUpgrade.appInfo.then((value) {
+    //   versionCode = value.versionName;
+    //   print("versionCode" + versionCode);
+    //   setState(() {});
+    // });
   }
   @override
   Widget build(BuildContext context) {

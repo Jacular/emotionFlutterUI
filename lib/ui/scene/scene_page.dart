@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:amotionflutterui/entity/menu_entity.dart';
-import 'file:///F:/flutterProduct/emotionFlutterUI/lib/widget/menu.dart';
+import 'package:amotionflutterui/widget/menu.dart';
 import 'package:amotionflutterui/utils/adapt.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -80,7 +80,6 @@ class _ScenePageState extends State<ScenePage>
     super.build(context);
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         brightness: Brightness.light,

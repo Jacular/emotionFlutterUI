@@ -29,7 +29,6 @@ class _DialogPageState extends State<DialogPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         brightness: Brightness.light,
