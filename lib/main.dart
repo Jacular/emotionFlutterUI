@@ -1,12 +1,9 @@
 import 'package:amotionflutterui/config/url_config.dart';
-import 'package:amotionflutterui/generated/i18n.dart';
+import 'package:amotionflutterui/delegate/cupertino_localizations_delegate.dart';
+import 'package:amotionflutterui/home_page.dart';
 import 'package:amotionflutterui/splash_page.dart';
-import 'package:amotionflutterui/utils/statusbar_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'delegate/cupertino_localizations_delegate.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,16 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     initEnvironment();
-    SystemChrome.setSystemUIOverlayStyle(statusBarDark);
     return MaterialApp(//Flutter之MaterialApp使用详解
-      //国际化-----------------------------------------------
-      localizationsDelegates: [
-        S.delegate,
+      localizationsDelegates: [//（本地化委托）
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        ChinaCupertinoLocalizations.delegate
+        ChinaCupertinoLocalizations.delegate,
       ],
-      supportedLocales: S.delegate.supportedLocales,
+      supportedLocales: [//（支持区域）
+        const Locale('en', 'US'),
+        const Locale('zh', 'CH'),
+      ],
       locale: Locale('zh'),//(地点)
       title: 'Emotion Flutter UI',//（标题）
       navigatorKey: navigatorKey,//（导航键）
