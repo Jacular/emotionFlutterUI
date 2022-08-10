@@ -143,4 +143,7 @@ class ChinaCupertinoLocalizations implements CupertinoLocalizations {
 
   @override
   List<String> get timerPickerSecondLabels => ["秒"];
+
+  @override
+  String get searchTextFieldPlaceholderLabel => throw UnimplementedError();
 }
